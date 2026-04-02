@@ -1,16 +1,40 @@
 
-
 <script>
-  const text = "Ես Անահիտն եմ 😎";
-  let i = 0;
+  const texts = [
+    "Ես Անահիտն եմ 😎",
+    "Frontend Developer 💻",
+    "Welcome to my website 🚀"
+  ];
 
-  function typing() {
-    if (i < text.length) {
-      document.getElementById("typing").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typing, 100);
+  let i = 0; // տեքստի ինդեքս
+  let j = 0; // տառերի ինդեքս
+  let currentText = "";
+  let isDeleting = false;
+
+  function type() {
+    currentText = texts[i];
+
+    if (!isDeleting) {
+      document.getElementById("typing").innerHTML =
+        currentText.substring(0, j++);
+    } else {
+      document.getElementById("typing").innerHTML =
+        currentText.substring(0, j--);
     }
+
+    if (j == currentText.length + 1) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+      return;
+    }
+
+    if (j == 0) {
+      isDeleting = false;
+      i = (i + 1) % texts.length;
+    }
+
+    setTimeout(type, isDeleting ? 50 : 100);
   }
 
-  typing();
+  type();
 </script>

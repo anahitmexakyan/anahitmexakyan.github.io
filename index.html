@@ -1,61 +1,97 @@
+
 <!DOCTYPE html>
 <html>
-   <title> Anahit's Website<title>
+<head>
+  <title>Anahit | Portfolio</title>
 
-   <style>
-     body  { 
-       background: linear-gradient(to right,#4facfe, #00f2fe);
-       font-family: Arial, sans-serif;
-       color: white;
-       margin-top: 100px;
-     }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
 
-     h1 {
-       font-size: 50px;
+    .header {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      padding: 60px;
+      text-align: center;
+    }
 
-     p {
-       font-size: 20px:
-     }
+    .header h1 {
+      font-size: 50px;
+    }
 
-     .box  {
-       background: rgba(0,0,0,0,.3);
-       padding: 20px:
-       border-radius: 15px:
-       display: inline-block;
-     }
+    .section {
+      padding: 40px;
+      text-align: center;
+    }
 
-     button  {
-       padding: 10px  20px;
-       border: none;
-       border-radius: 10px;
-       background: white;
-       color: black;
-       font-size: 16px;
-       cursor: pointer;
-     }
+    .about {
+      background: #f4f4f4;
+    }
 
-     button:hover {
-       background: black;
-       color: white;
-     }
-   </style>
- </head>
+    .projects {
+      background: #ffffff;
+    }
 
- <body>
+    .contact {
+      background: #222;
+      color: white;
+    }
 
-   <div class=''box''>
-   <a href='' https: //t.me/anahit100'' target=''_blank''>
-      <button>գրիր ինձ telegram-ում📩<button>
-      </a>
-     <h1>բարև 👋<h1>
-     <p>ես Անահիտն եմ💻</p>
-     <p>սկսնակ ծրաքրավորող եմ😎</p>
+    .card {
+      background: #eee;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      width: 200px;
+    }
 
-      <button onclick=''alert(շնորհակալություն այցելելու համար❤️')''>
-        սեղմիր ինձ
-      <button>
-      </button>
-    </div>
-        
- </body>
- </html>
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 20px;
+      background: #ff4b2b;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff416c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>Ես Անահիտն եմ 😎</h1>
+    <p>Frontend Developer 💻</p>
+  </div>
+
+  <div class="section about">
+    <h2>Իմ մասին</h2>
+    <p>Ես սկսնակ ծրագրավորող եմ և սիրում եմ ստեղծել կայքեր 🔥</p>
+  </div>
+
+  <div class="section projects">
+    <h2>Իմ Projects</h2>
+
+    <div class="card">Website 1</div>
+    <div class="card">Website 2</div>
+    <div class="card">Website 3</div>
+
+  </div>
+
+  <div class="section contact">
+    <h2>Կապ ինձ հետ</h2>
+
+    <a href="https://t.me/anahit100" target="_blank">
+      <button>Telegram 📩</button>
+    </a>
+
+  </div>
+
+</body>
+</html>

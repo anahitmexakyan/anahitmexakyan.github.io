@@ -1,40 +1,43 @@
 
-<script>
-  const texts = [
-    "Ես Անահիտն եմ 😎",
-    "Frontend Developer 💻",
-    "Welcome to my website 🚀"
-  ];
-
-  let i = 0; // տեքստի ինդեքս
-  let j = 0; // տառերի ինդեքս
-  let currentText = "";
-  let isDeleting = false;
-
-  function type() {
-    currentText = texts[i];
-
-    if (!isDeleting) {
-      document.getElementById("typing").innerHTML =
-        currentText.substring(0, j++);
-    } else {
-      document.getElementById("typing").innerHTML =
-        currentText.substring(0, j--);
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      text-align: center;
+      font-family: Arial;
     }
 
-    if (j == currentText.length + 1) {
-      isDeleting = true;
-      setTimeout(type, 1000);
-      return;
+    .box {
+      background: #222;
+      margin: 50px;
+      padding: 30px;
+      border-radius: 20px;
     }
 
-    if (j == 0) {
-      isDeleting = false;
-      i = (i + 1) % texts.length;
+    h1 {
+      color: #00f2fe;
     }
 
-    setTimeout(type, isDeleting ? 50 : 100);
-  }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4b2b;
+      color: white;
+    }
+  </style>
+</head>
 
-  type();
-</script>
+<body>
+
+  <div class="box">
+    <h1>Իմ կայքը 😎</h1>
+    <p>Ես սովորում եմ HTML/CSS 💻</p>
+    <button>Սեղմիր</button>
+  </div>
+
+</body>
+</html>
